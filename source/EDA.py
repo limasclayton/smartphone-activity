@@ -28,7 +28,7 @@ corr.drop('activity', inplace=True)
 #plt.show()
 
 # Select features with corr > threshold and see if they are correlated betweem themselves
-threshold_activity = 0.5
+threshold_activity = 0.05
 features = corr[abs(corr.activity) > threshold_activity].index.values
 max_corr_feature = corr[(abs(corr.activity) == max(abs(corr.activity)))].index.values
 #print(max_corr_feature)
@@ -38,7 +38,7 @@ print(len(features))
 #sns.heatmap(corr2, xticklabels=corr2.columns, yticklabels=corr2.columns, annot=True, fmt='.2f')
 #plt.show()
 
-threshold_features = 0.7
+threshold_features = 0.99
 # Already selects the feature that is most correlated with activity
 selected_features = set(max_corr_feature)
 #print(selected_features)
@@ -53,11 +53,16 @@ for f1 in features:
 print(selected_features)
 print(len(selected_features))
 
-corr_selected_features = df[selected_features].corr()
-sns.heatmap(corr_selected_features, xticklabels=corr_selected_features.columns, yticklabels=corr_selected_features.columns, annot=True, fmt='.2f')
-plt.show()
+#corr_selected_features = df[selected_features].corr()
+#sns.heatmap(corr_selected_features, xticklabels=corr_selected_features.columns, yticklabels=corr_selected_features.columns, annot=True, fmt='.2f')
+#plt.show()
 
 # Conclusions
 # Aparrently some feature have high correlation with activity
 # But they have high correlation between themselves
-# Selecting features with > 0.5 correlation with target and < 0.7 between themselves
+# Selecting features with > 0.5 correlation with target and < 0.7 between themselves. 0.89
+# Selecting features with > 0.1 correlation with target and < 0.95 between themselves. 0.975
+# Selecting 245/512 features with > 0.05 correlation with target and < 0.95 between themselves. 0.975
+# Selecting 354/512 features with > 0.05 correlation with target and < 0.98 between themselves. 0.982
+# Selecting 407/512 features with > 0.05 correlation with target and < 0.99 between themselves. 0.982
+# All Features. 0.984
