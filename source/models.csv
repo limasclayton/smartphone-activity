@@ -1,0 +1,4 @@
+model," selected_features",details," train_score"," test_score"," parameters"
+Logistic Regression,"All",,"0.995","0.984",""
+Logistic Regression,"354","","0.993","0.982",""
+Logistic Regression,"407","","0.993","0.982",""
