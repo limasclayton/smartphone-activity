@@ -19,3 +19,5 @@ source/EDA.py has the exploratory data analysis done in the dataset, some featur
 source/model.py has the feature selection and the chosen model pipeline for this dataset.
 
 source/models.csv has the chosen model, parameters and their detalied scores.
+
+source/nn.csv has the preprocessing, feature selection and a sequential neural network for the dataset.
