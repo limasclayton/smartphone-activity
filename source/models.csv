@@ -1,4 +1,5 @@
 model," selected_features",details," train_score"," test_score"," parameters"
+Neural Network,"All","","0.9927","0.986","Dense(128), Dense(256), Dropout(0.25), Dense(128), Droupout(0.25), Dense(6)"
 Logistic Regression,"All",,"0.995","0.984",""
-Logistic Regression,"354","","0.993","0.982",""
-Logistic Regression,"407","","0.993","0.982",""
+Logistic Regression,"354",,"0.993","0.982",""
+Logistic Regression,"407",,"0.993","0.982",""
